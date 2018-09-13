@@ -1,0 +1,8 @@
+use jadrn017;
+
+drop table if exists sales;
+
+create table sales(
+    `sku` varchar(20) NOT NULL,
+    `quantity` varchar(20) NOT NULL,
+    `dateofpurchase` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP); 

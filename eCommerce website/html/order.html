@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Guggari, Pooja Maheshwar. 
+	 Class Account# jadrn017 
+	 Fall 2017
+	-->
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <title>Order from Bertha's Deluxe Chocolates</title>
+    <link rel="stylesheet" href="http://jadran.sdsu.edu/~jadrn000/modal_dialog/ui/css/trontastic/jquery-ui-1.10.4.custom.css">
+    <link rel="stylesheet" href="mycss.css" />
+	<link rel="shortcut icon" href="choco.png" />
+    <script src="http://jadran.sdsu.edu/~jadrn000/modal_dialog/ui/js/jquery-1.10.2.js"></script>
+    <script src="http://jadran.sdsu.edu/~jadrn000/modal_dialog/ui/js/jquery-ui-1.10.4.custom.js"></script>
+	<script type="text/javascript" src="/jquery/jquery.js"></script>
+    <script type="text/javascript" src="shopping_cart.js"></script>  
+    <script type="text/javascript" src="ajax_get_lib.js"></script>
+    <script type="text/javascript" src="place_order.js"></script>
+</head>
+
+<body>
+    <div class="ui-widget-header">
+        <header>
+			<img src="choco.png" width="30px" id="logo"></img>&nbsp;&nbsp;
+			<a href="index.html" class="active">BERTHA'S DELUXE CHOCOLATES</a>
+		</header>
+		<div class="menu_bar">
+			<ul class="menu_list">
+				<li><a href="index.html" class="menu_home">Home</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="order.html" class="active">Order Online</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><input id="cart" name="cart" type="image" src="cart.png" width="30px"></input><span id="count"></span></li>
+			</ul>
+		</div>
+    </div>
+    <div id="showcart"></div>
+    <div id="customerdetails"></div>
+    <div class="ui-widget">
+        <div id="ui-dialog" title="Complete Your Oder">
+            <div class="ui-dialog-content">
+                <br />
+	    		<form id="billform">
+			    <table class="bill">
+			        <tr><th>BILLING ADDRESS</th></tr>
+					<tr><td colspan="2"><label>Name:<sup>*</sup>&nbsp;</label></td>
+						<td><input type="text" name="fname" placeholder="First Name" size="15"/>
+						<input type="text" name="lname" placeholder="Last Name" size="15"/></td>
+					</tr>
+					<tr>		
+						<td colspan="2"><label for="address1">Address Line 1:<sup>*</sup>&nbsp;</label></td>
+						<td colspan="5"><input type="text" name="address1" size="50" placeholder="Street address, Apartment number"/></td>
+					</tr> 
+					<tr>		
+						<td colspan="2"><label for="address2">Address Line 2:&nbsp;</label></td>
+						<td colspan="5"><input type="text" name="address2" size="50" /></td>
+					</tr> 
+					<tr>
+						<td colspan="2"><label>City:<sup>*</sup> &nbsp;</label></td>
+						<td><input type="text" size="10" name="city"/>
+							&nbsp;&nbsp;State <sup>*</sup> &nbsp;<input type="text" size="6" name="state" />  
+							&nbsp;&nbsp;Zip <sup>*</sup> &nbsp;<input type="text" size="8" maxlength="5" name="zip" /> 
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><label>Phone:<sup>*</sup> &nbsp;</label></td>
+						<td colspan="5">
+							+1(<input type="text" name="area_phone" size="5" maxlength="3" />)
+							<input type="text" name="prefix_phone" size="5" maxlength="3" /> -
+							<input type="text" name="phone" size="8" maxlength="4" />
+						</td>
+					</tr>	
+					<tr><td>&nbsp;</td></tr>				
+					<tr><th>SHIPPING ADDRESS</th></tr>
+					<tr>
+						<td colspan="2"> <input type="checkbox" name="sameshipping">Same as Billing address</td>
+					</tr>
+					<tr><td colspan="2"><label>Name:<sup>*</sup>&nbsp;</label></td>
+						<td><input type="text" name="s_fname" placeholder="First Name" size="15"/>
+						<input type="text" name="s_lname" placeholder="Last Name" size="15"/></td>
+					</tr>
+					<tr>		
+						<td colspan="2"><label for="s_address1">Address Line 1:<sup>*</sup>&nbsp;</label></td>
+						<td colspan="5"><input type="text" name="s_address1" size="50" placeholder="Street address, Apartment number"/></td>
+					</tr> 
+					<tr>		
+						<td colspan="2"><label for="s_address2">Address Line 2:&nbsp;</label></td>
+						<td colspan="5"><input type="text" name="s_address2" size="50" /></td>
+					</tr> 
+					<tr>
+						<td colspan="2"><label>City:<sup>*</sup> &nbsp;</label></td>
+						<td><input type="text" size="10" name="s_city"/>
+							&nbsp;&nbsp;State <sup>*</sup> &nbsp;<input type="text" size="6" name="s_state" />  
+							&nbsp;&nbsp;Zip <sup>*</sup> &nbsp;<input type="text" size="8" maxlength="5" name="s_zip" />   
+						</td>
+					</tr>					
+					<tr>
+						<td colspan="2"><label>Phone:<sup>*</sup> &nbsp;</label></td>
+						<td colspan="5">
+							+1(<input type="text" name="s_area_phone" size="5" maxlength="3" />)
+							<input type="text" name="s_prefix_phone" size="5" maxlength="3" /> -
+							<input type="text" name="s_phone" size="8" maxlength="4" />
+						</td>
+					</tr>
+					<tr><td>&nbsp;</td></tr>
+			
+			    <tr><th>PAYMENT DETAILS</th></tr>
+			    <tr><td colspan="2"><label for="cardtype" class="required" >Card Type: </label></td>
+					<td colspan="5"><select name="cardtype" id="cardtype">
+						<option value="Visa">Visa</option>
+						<option value="Mastercard">Mastercard</option>
+						<option value="Discover">Discover</option>
+						<option value="American Express">American Express</option>
+					</select></td>
+				</tr>
+				<tr><td colspan="2"><label class="input required" for="card">Card Number: </label></td>
+					<td colspan="5"><input type="text" name="card" id="card" size="18" maxlength="16"  placeholder="****************"/></td>
+				</tr>
+				<tr><td colspan="2"><label class="input required" for="expiry">Expiry: </label></td>
+					<td colspan="5"><input type="text" size="14" maxlength="7" name="expiry" placeholder="mm/yyyy" />
+					
+				</tr>  
+				</table>
+				<div id="cardspace">
+					<div id="status"></div>
+
+					<br />
+				            <input type="reset" />
+				            <input type="submit" id='placeorder'  value="Place Order"/>
+				    <br />
+			    </div>
+	            </form> 
+            </div> <!-- end ui-dialog-content -->
+        </div> <!-- end ui-dialog -->     
+    </div>  <!-- end ui-widget -->
+
+
+
+
+ <!-- Footer template from https://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates-->
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Bertha's Deluxe Chocolates</h3>
+
+				<p class="footer-company-name">Bertha's Deluxe Chocolates &copy; 2017</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>1028 Frank Lampard Street</span> San Diego, California</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1(111)111-1111</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@berthas.com" id="diff_color">support@berthas.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Bertha's Deluxe Chocolates is a chocolate company that produces and distributes home-made and delicious chocolates right at your doorstep.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+</body>
+</html>

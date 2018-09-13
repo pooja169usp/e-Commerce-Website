@@ -1,0 +1,465 @@
+/* 	 Guggari, Pooja Maheshwar. 
+	 Class Account# jadrn017 
+	 Fall 2017
+*/
+body {
+	margin:0;
+	text-align: center;
+}
+
+button {
+	display: inline-block;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 24%;
+}
+
+img#down {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+input#cart {
+	float: right;
+	padding-right: 20px;
+}
+
+.buy span {
+        font-style: italic;
+        font-weight: bold;
+        color: green;
+        display: none;
+        margin-left: 50px;
+        }
+
+div.space {
+	vertical-align: text-bottom;
+}
+
+ul.products {
+	text-align: center;
+}
+
+ul.products li {
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    vertical-align: top;
+    border-style: solid;
+    border-color: #ddd;
+    border-width: 1px;
+    padding: 5px;
+    margin: 50px;
+    text-align: center;
+}
+
+span#count {
+	color: white;
+}
+
+#cardspace {
+	text-align: center;
+}
+
+span#count {
+	float: right;
+}
+
+.bill tr th {
+	text-align: left;
+}
+
+.row, .column {
+	text-align: center;
+	border: 1;
+}
+
+table.displaycart {
+	border-width: 1px;
+	border-style: solid;
+    border-color: #ddd;
+    text-align: center;
+    align-self: center;
+    
+}
+
+table.displaysales {
+	border-width: 1px;
+	border-style: solid;
+    border-color: #ddd;
+    text-align: center;
+    align-self: center;
+    background-color:rgba(10,10,10,.8);
+    color: white;
+    width: 800px;
+    margin: 0 auto;
+    
+}
+
+h3#sales {
+	color: white;
+	text-align: center;
+}
+
+p.salesdisplay {
+	color: white;
+	text-decoration: bold;
+}
+
+table.overall {
+	border-width: 1px;
+	border-style: solid;
+    border-color: #ddd;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    background-color:rgba(10,10,10,.8);
+}
+
+table.overall tr, table.overall th, table.overall td  {
+	padding: 1px;
+	border-width: 1px;
+	border-style: solid;
+    border-color: #ddd;
+
+}
+
+table.displaysales tr, table.displaysales th, table.displaysales td  {
+	padding: 10px;
+	border-width: 1px;
+	border-style: solid;
+    border-color: #ddd;
+
+}
+
+body#salesrep {
+	background-image: url("http://jadran.sdsu.edu/~jadrn017/proj4/C12.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+
+table.paymentdet {
+	border-width: 1px;
+	border-style: solid;
+    border-color: #ddd;
+    text-align: left;
+    
+}
+
+
+table.displaycart tr, table.displaycart th, table.displaycart td  {
+	padding: 30px;
+	border-width: 1px;
+	border-style: solid;
+    border-color: #ddd;
+}
+
+/* button css from http://cssdeck.com/labs/better-button */
+
+input#order {
+	display: block;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	margin: 20px auto;
+	color: #ccc;
+	background-color: #555;
+	background: -webkit-linear-gradient(#888, #555);
+	background: linear-gradient(#888, #555);
+	border: 0 none;
+	border-radius: 3px;
+	text-shadow: 0 -1px 0 #000;
+	box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+	cursor: pointer;
+	-webkit-transition: all 150ms ease;
+	transition: all 150ms ease;
+}
+
+
+input#order:hover, input#order:focus
+{
+	-webkit-animation: pulsate 1.2s linear infinite;
+	animation: pulsate 1.2s linear infinite;
+}
+	
+@-webkit-keyframes pulsate
+{
+	0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+	50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+	100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+}
+		
+@keyframes pulsate
+{
+	0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+	50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+	100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+}
+
+input#order:active
+{
+	color: #fff;
+	text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+	box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
+	-webkit-animation: none;
+	animation: none;
+}
+
+
+
+
+
+input#milk, input#dark, input#nuts, input#brittle, input#truffles, input#gifts, input#holiday {
+	cursor: pointer;
+}
+
+table.paymentdet tr, table.paymentdet th, table.paymentdet td  {
+	padding: 8px;
+	border-width: 1px;
+	border-style: solid;
+    border-color: #ddd;
+}
+
+.column {
+	width: 50%;
+}
+
+ul.menu_list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #ccc;
+	border-width: 1px 0;
+	background-color: #333;
+	text-align: center;
+}
+
+#diff_color {
+	color: #ddd;
+}
+
+h4 {
+	text-align: center;
+}
+.menu_list li {
+	display: inline;
+}
+header {
+	background-color: #302013;
+	text-align: center;
+	padding-top: 0;
+}
+#logo {
+	padding-top: 8px;
+}
+header a.active {
+	color: white;
+	text-decoration: none;
+	font-size: 32px;
+}
+
+table.bill {
+	text-align: left;
+}
+
+.menu_list li a.active {
+	background-color: #ddd;
+  	color: black;
+}
+
+.menu_list a {
+	display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+.menu_list li a:hover {
+	background-color: #ddd;
+  	color: black;
+}
+
+ul {
+	list-style-type: none;
+	text-align: center;
+}
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	margin-top: -2px; /* prevents infinite scroll if #footer have a border of 2px*/
+	padding: 10px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+i.fa-map-marker {
+	color: white;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
